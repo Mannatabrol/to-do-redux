@@ -7,13 +7,12 @@ const Update = () => {
     const { id } = useParams();
     const users = useSelector((state) => state.users);
 
-    // Convert id to a number
+   
     const userId = parseInt(id);
 
-    // Use lowercase 'filter' instead of 'Filter'
+    
     const existingUser = users.find(user => user.id === userId);
 
-    // Destructure the user object if it exists
     const { task, description } = existingUser || {};
 
     const [utask, setTask] = useState(task || '');
@@ -24,7 +23,7 @@ const Update = () => {
     const handleUpdate = (event) => {
         event.preventDefault();
         dispatch(updateUser({
-            id: userId, // Use userId instead of id
+            id: userId, 
             task: utask,
             description: udescription,
         }));
