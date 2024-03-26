@@ -23,11 +23,11 @@ function Create() {
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label htmlFor="task" className="form-label">Task</label> 
-                        <input type="text" id="task" name='task' className='form-control' placeholder='Enter current to do' onChange={e => setTask(e.target.value)} autoComplete="off" />
+                        <input type="text" id="task" name='task' className='form-control' placeholder='Enter  task to do' onChange={e => setTask(e.target.value)} autoComplete="off" />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="description" className="form-label">Description</label> 
-                        <input type="text" id="description" name='description' className='form-control' placeholder='Enter updated to do' onChange={e => setDescription(e.target.value)} autoComplete="off" />
+                        <input type="text" id="description" name='description' className='form-control' placeholder='Enter description to do' onChange={e => setDescription(e.target.value)} autoComplete="off" />
                     </div>
                     <br />
                     <button type="submit" className='btn btn-info'>Submit</button>
